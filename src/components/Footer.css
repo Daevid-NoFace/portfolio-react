@@ -1,0 +1,27 @@
+.footer {
+  padding: 3rem;
+  text-align: center;
+  border-top: 1px solid rgba(52, 211, 153, 0.1);
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.25rem;
+  color: var(--green-400);
+  margin-bottom: 1rem;
+}
+
+.footer-text {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-text a {
+  color: var(--green-500);
+  text-decoration: none;
+}
