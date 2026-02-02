@@ -5,7 +5,7 @@ export const skillsData = [
   },
   {
     icon: "🗄️",
-    tags: ["PostgreSQL", "MySQL", "Redis", "Flyway", "Query Optimization"]
+    tags: ["PostgreSQL", "MySQL", "Redis"]
   },
   {
     icon: "🌐",
@@ -13,7 +13,7 @@ export const skillsData = [
   },
   {
     icon: "⚙️",
-    tags: ["Docker", "Git", "GitHub Actions", "Railway", "Linux"]
+    tags: ["Docker", "Git", "GitHub Actions", "Linux"]
   }
 ]
 
@@ -46,7 +46,7 @@ export const projectsData = [
 
 export const socialLinks = {
   email: "dmartinezgonzalez524@gmail.com",
-  github: "https://github.com//Daevid-NoFace",
+  github: "https://github.com/Daevid-NoFace",
   linkedin: "https://linkedin.com/in/tu-usuario",
 };
 
