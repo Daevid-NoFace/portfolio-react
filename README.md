@@ -85,19 +85,15 @@ git remote add origin https://github.com/tu-usuario/tu-repo.git
 git push -u origin main
 ```
 
-### Paso 4: Desplegar
-
-```bash
-npm run build
-npm run deploy
-```
-
-### Paso 5: Configurar GitHub Pages
+### Paso 4: Configurar GitHub Pages
 
 - Ve a Settings > Pages
-- Source: "Deploy from a branch"
-- Branch: `gh-pages` / `/ (root)`
-- Save
+- Source: "GitHub Actions"
+
+### Paso 5: Desplegar
+
+Cada push a `main` dispara `.github/workflows/deploy.yml`, que compila y publica `dist/`.
+También se puede lanzar a mano desde la pestaña Actions (`workflow_dispatch`).
 
 Tu sitio estará en: `https://tu-usuario.github.io/tu-repo/`
 
