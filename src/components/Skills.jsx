@@ -1,54 +1,36 @@
-import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLanguage } from '../context/LanguageContext'
 import { skillsData } from '../data/content'
+import { useGsap } from '../hooks/useAnimations'
 import './Skills.css'
 
-gsap.registerPlugin(ScrollTrigger)
-
 const Skills = () => {
-  const sectionRef = useRef(null)
   const { t } = useLanguage()
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(".skill-card",
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          stagger: 0.15,
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 80%",
-          }
-        }
-      )
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
+  const ref = useGsap((el) => {
+    gsap.from(el.querySelectorAll('.skill-row'), {
+      y: 24, opacity: 0, duration: 0.7, stagger: 0.1, scrollTrigger: { trigger: el, start: 'top 80%' }
+    })
+  })
 
   return (
-    <section id="skills" ref={sectionRef} className="skills-section">
+    <section id="stack" className="skills wrap" ref={ref}>
       <div className="section-header">
-        <span className="section-tag">{t.skills.tag}</span>
-        <h2 className="section-title">{t.skills.title}</h2>
+        <div>
+          <p className="section-tag">{t.skills.tag}</p>
+          <h2 className="section-title">{t.skills.title}</h2>
+        </div>
         <p className="section-subtitle">{t.skills.subtitle}</p>
       </div>
-      
-      <div className="skills-grid">
-        {skillsData.map((skill, index) => (
-          <div className="skill-card" key={index}>
-            <div className="skill-icon">{skill.icon}</div>
-            <h3>{t.skills.cards[index].title}</h3>
-            <p>{t.skills.cards[index].description}</p>
+      <div>
+        {skillsData.map((skill, i) => (
+          <div className="skill-row" key={i}>
+            <span className="skill-index mono">{String(i + 1).padStart(2, '0')}</span>
+            <div>
+              <h3>{t.skills.rows[i].title}</h3>
+              <p>{t.skills.rows[i].description}</p>
+            </div>
             <div className="skill-tags">
-              {skill.tags.map((tag, i) => (
-                <span className="skill-tag" key={i}>{tag}</span>
-              ))}
+              {skill.tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}
             </div>
           </div>
         ))}

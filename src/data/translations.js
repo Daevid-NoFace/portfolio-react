@@ -1,206 +1,128 @@
 export const translations = {
   en: {
-    // Navigation
-    nav: {
-      home: "Home",
-      skills: "Skills",
-      projects: "Projects",
-      about: "About",
-      contact: "Contact"
-    },
-    // Hero
+    nav: { home: "Home", stack: "Stack", work: "Work", about: "About", contact: "Contact", menu: "Open menu", closeMenu: "Close menu", switchLang: "Switch language to Spanish" },
     hero: {
-      badge: "Available for projects",
-      greeting: "Hi, I'm",
-      role: "Backend Developer",
-      description: "Specialized in Java Spring Boot and scalable architectures. I transform ideas into robust and efficient applications with clean code and best practices.",
-      viewProjects: "View projects",
-      contactMe: "Contact me",
-      stats: {
-        experience: "Years experience",
-        projects: "Projects",
-        dedication: "Dedication"
-      }
+      available: "Available for opportunities",
+      lines: ["Full", "stack", "Engineer"],
+      software: "Software",
+      intro: "Hi, I'm David. I build scalable systems, from Java & Spring backends to Angular & React fronts and AI tooling.",
+      open: "Open to all forms of collaboration, regardless of location and language.",
+      scrollDown: "Scroll down"
     },
-    // Skills
-    skills: {
-      tag: "// My skills",
-      title: "Tech Stack",
-      subtitle: "Specialized in the Java ecosystem with full-stack experience to deliver complete solutions",
-      cards: [
-        {
-          title: "Backend Development",
-          description: "Development of robust RESTful APIs and microservices with Java and Spring Boot. Clean and scalable architectures."
-        },
-        {
-          title: "Databases",
-          description: "Design and optimization of relational schemas. Efficient queries and data management at scale."
-        },
-        {
-          title: "Frontend Development",
-          description: "Modern and responsive interfaces. Fluid user experiences with the latest web technologies."
-        },
-        {
-          title: "DevOps & Tools",
-          description: "Deployment automation, containerization and version control for efficient workflows."
-        }
-      ]
-    },
-    // Projects
-    projects: {
-      tag: "// Portfolio",
-      title: "Featured Projects",
-      subtitle: "A selection of projects that demonstrate my experience in backend and full-stack development",
+    stats: {
+      badge: "Professional statistics",
+      headline: ["Java that scales. Fronts that ship.\nTools that think. One engineer ", "behind the work.", ""],
       items: [
-        {
-          title: "E-Commerce Platform",
-          description: "Complete e-commerce platform with Stripe payment integration, inventory management and admin panel."
-        },
-        {
-          title: "Blog System",
-          description: "Full-stack blog system with JWT authentication, rich content editor and SEO optimization."
-        },
-        {
-          title: "Sports Stats Platform",
-          description: "Real-time sports statistics platform with data visualization and team tracking."
-        },
-        {
-          title: "Invoice Generator",
-          description: "Invoice generation system with PDF export, client management and financial reports."
-        }
-      ],
-      code: "Code",
-      demo: "Demo"
-    },
-    // About
-    about: {
-      tag: "// About me",
-      title: "My Story",
-      heading: "From tour guide to backend developer",
-      paragraphs: [
-        "My path to software development wasn't conventional. I started my career as a tour guide in Cuba, where I learned the importance of effective communication, real-time problem solving and attention to detail.",
-        "This experience taught me to understand people's needs and create memorable experiences, skills that I now apply in software development to create applications that truly solve problems.",
-        "Today I specialize in Java Spring Boot, building robust and scalable backends that are the backbone of modern applications."
-      ],
-      highlights: [
-        "Clean and maintainable code",
-        "Well-designed RESTful APIs",
-        "Optimized databases",
-        "Continuous learning"
+        { label: "Years experience", short: "Years exp." },
+        { label: "Projects shipped", short: "Projects" },
+        { label: "Stacks in production", short: "Stacks in prod" },
+        { label: "Based in", short: "Based in" }
       ]
     },
-    // Contact
-    contact: {
-      title: "Shall we work together?",
-      description: "I'm available for freelance projects and collaboration opportunities. Let's talk about how I can help you!"
+    skills: {
+      tag: "01 — Stack",
+      title: "What I work\nwith",
+      subtitle: "Backend first, full stack by necessity. The tools below are the ones I ship with every week, not a wish list.",
+      rows: [
+        { title: "Backend & data", description: "RESTful APIs and services with Java and Spring Boot. Relational schemas designed and tuned, caching where it earns its place." },
+        { title: "Frontend", description: "Angular with Tailwind on production dashboards, React and Astro for sites and portfolios. Typed end to end." },
+        { title: "AI tooling", description: "Python services and MCP servers that give agents real data. Multi-agent workflows wired into the dev loop, not demos." },
+        { title: "DevOps & tools", description: "Containers, CI pipelines and Linux boxes. Deploys that are boring on purpose." }
+      ]
     },
-    // Footer
-    footer: {
-      designed: "Designed and developed with",
-      using: "using React & GSAP",
-      rights: "All rights reserved."
-    }
+    projects: {
+      tag: "02 — Selected work",
+      title: "Things I\nshipped",
+      all: "All repositories",
+      open: "Open",
+      code: "Code",
+      demo: "Demo",
+      items: [
+        { category: "E-COMMERCE", title: "E-Commerce Platform", description: "Full e-commerce platform with Stripe payments, inventory management and an admin panel." },
+        { category: "CONTENT", title: "Blog System", description: "Full-stack blog with JWT authentication, a rich content editor and SEO optimisation." },
+        { category: "DATA", title: "Sports Stats Platform", description: "Real-time sports statistics with data visualisation and team tracking." },
+        { category: "FINANCE", title: "Invoice Generator", description: "Invoice generation with PDF export, client management and financial reports." }
+      ]
+    },
+    about: {
+      tag: "03 — About",
+      photoAlt: "David, portrait",
+      origin: "Havana → Famalicão",
+      heading: ["From tour guide\nto ", "software", " engineer."],
+      paragraphs: [
+        "My path to software wasn't conventional. I started as a tour guide in Cuba, where I learned effective communication, real-time problem solving and attention to detail.",
+        "That taught me to understand what people actually need. Today I build backends in Java and Spring Boot, front ends in Angular and React, and the AI tooling that keeps the loop tight."
+      ],
+      highlights: ["Clean, maintainable code", "Well-designed REST APIs", "Optimised databases", "Continuous learning"]
+    },
+    contact: {
+      heading: ["Let's build something ", "solid", " together."],
+      description: "Open to freelance projects and long-term collaborations. Backend, full stack or the AI tooling around it: let's turn the idea into something that runs in production.",
+      hire: "Hire me"
+    },
+    footer: { email: "Email", credit: "Designed and built with React & GSAP" }
   },
   es: {
-    // Navigation
-    nav: {
-      home: "Inicio",
-      skills: "Skills",
-      projects: "Proyectos",
-      about: "Sobre mí",
-      contact: "Contacto"
-    },
-    // Hero
+    nav: { home: "Inicio", stack: "Stack", work: "Trabajo", about: "Sobre mí", contact: "Contacto", menu: "Abrir menú", closeMenu: "Cerrar menú", switchLang: "Cambiar idioma a inglés" },
     hero: {
-      badge: "Disponible para proyectos",
-      greeting: "Hola, soy",
-      role: "Backend Developer",
-      description: "Especializado en Java Spring Boot y arquitecturas escalables. Transformo ideas en aplicaciones robustas y eficientes con código limpio y buenas prácticas.",
-      viewProjects: "Ver proyectos",
-      contactMe: "Contactar",
-      stats: {
-        experience: "Años experiencia",
-        projects: "Proyectos",
-        dedication: "Dedicación"
-      }
+      available: "Disponible para oportunidades",
+      lines: ["Full", "stack", "Ingeniero"],
+      software: "Software",
+      intro: "Hola, soy David. Construyo sistemas escalables, de backends Java & Spring a fronts Angular & React y herramientas de IA.",
+      open: "Abierto a cualquier forma de colaboración, sin importar ubicación ni idioma.",
+      scrollDown: "Bajar"
     },
-    // Skills
-    skills: {
-      tag: "// Mis habilidades",
-      title: "Stack Tecnológico",
-      subtitle: "Especializado en el ecosistema Java con experiencia full-stack para entregar soluciones completas",
-      cards: [
-        {
-          title: "Backend Development",
-          description: "Desarrollo de APIs RESTful robustas y microservicios con Java y Spring Boot. Arquitecturas limpias y escalables."
-        },
-        {
-          title: "Bases de Datos",
-          description: "Diseño y optimización de esquemas relacionales. Consultas eficientes y gestión de datos a escala."
-        },
-        {
-          title: "Frontend Development",
-          description: "Interfaces modernas y responsivas. Experiencias de usuario fluidas con las últimas tecnologías web."
-        },
-        {
-          title: "DevOps & Tools",
-          description: "Automatización de despliegues, containerización y control de versiones para flujos de trabajo eficientes."
-        }
-      ]
-    },
-    // Projects
-    projects: {
-      tag: "// Portfolio",
-      title: "Proyectos Destacados",
-      subtitle: "Una selección de proyectos que demuestran mi experiencia en desarrollo backend y full-stack",
+    stats: {
+      badge: "Estadísticas profesionales",
+      headline: ["Java que escala. Fronts que se entregan.\nHerramientas que piensan. Un ingeniero ", "detrás del trabajo.", ""],
       items: [
-        {
-          title: "E-Commerce Platform",
-          description: "Plataforma completa de comercio electrónico con integración de pagos Stripe, gestión de inventario y panel de administración."
-        },
-        {
-          title: "Blog System",
-          description: "Sistema de blog full-stack con autenticación JWT, editor rico de contenido y optimización SEO."
-        },
-        {
-          title: "Sports Stats Platform",
-          description: "Plataforma de estadísticas deportivas en tiempo real con visualización de datos y seguimiento de equipos."
-        },
-        {
-          title: "Invoice Generator",
-          description: "Sistema de generación de facturas con exportación PDF, gestión de clientes y reportes financieros."
-        }
-      ],
-      code: "Código",
-      demo: "Demo"
-    },
-    // About
-    about: {
-      tag: "// Sobre mí",
-      title: "Mi Historia",
-      heading: "De guía turístico a desarrollador backend",
-      paragraphs: [
-        "Mi camino hacia el desarrollo de software no fue convencional. Comencé mi carrera como guía turístico en Cuba, donde aprendí la importancia de la comunicación efectiva, la resolución de problemas en tiempo real y la atención al detalle.",
-        "Esta experiencia me enseñó a entender las necesidades de las personas y a crear experiencias memorables, habilidades que ahora aplico en el desarrollo de software para crear aplicaciones que realmente resuelven problemas.",
-        "Hoy me especializo en Java Spring Boot, construyendo backends robustos y escalables que son la columna vertebral de aplicaciones modernas."
-      ],
-      highlights: [
-        "Código limpio y mantenible",
-        "APIs RESTful bien diseñadas",
-        "Bases de datos optimizadas",
-        "Aprendizaje continuo"
+        { label: "Años de experiencia", short: "Años exp." },
+        { label: "Proyectos entregados", short: "Proyectos" },
+        { label: "Stacks en producción", short: "Stacks en prod" },
+        { label: "Ubicado en", short: "Ubicado en" }
       ]
     },
-    // Contact
-    contact: {
-      title: "¿Trabajamos juntos?",
-      description: "Estoy disponible para proyectos freelance y oportunidades de colaboración. ¡Hablemos sobre cómo puedo ayudarte!"
+    skills: {
+      tag: "01 — Stack",
+      title: "Con qué\ntrabajo",
+      subtitle: "Backend primero, full stack por necesidad. Las herramientas de abajo son con las que entrego cada semana, no una lista de deseos.",
+      rows: [
+        { title: "Backend y datos", description: "APIs RESTful y servicios con Java y Spring Boot. Esquemas relacionales diseñados y afinados, caché donde se la gana." },
+        { title: "Frontend", description: "Angular con Tailwind en dashboards de producción, React y Astro para sitios y portfolios. Tipado de extremo a extremo." },
+        { title: "Herramientas de IA", description: "Servicios en Python y servidores MCP que dan datos reales a los agentes. Workflows multiagente integrados en el ciclo de desarrollo, no demos." },
+        { title: "DevOps y herramientas", description: "Contenedores, pipelines de CI y máquinas Linux. Despliegues aburridos a propósito." }
+      ]
     },
-    // Footer
-    footer: {
-      designed: "Diseñado y desarrollado con",
-      using: "usando React & GSAP",
-      rights: "Todos los derechos reservados."
-    }
+    projects: {
+      tag: "02 — Trabajo seleccionado",
+      title: "Cosas que\nentregué",
+      all: "Todos los repositorios",
+      open: "Abrir",
+      code: "Código",
+      demo: "Demo",
+      items: [
+        { category: "E-COMMERCE", title: "E-Commerce Platform", description: "Plataforma de e-commerce completa con pagos Stripe, gestión de inventario y panel de administración." },
+        { category: "CONTENIDO", title: "Blog System", description: "Blog full-stack con autenticación JWT, editor de contenido enriquecido y optimización SEO." },
+        { category: "DATOS", title: "Sports Stats Platform", description: "Estadísticas deportivas en tiempo real con visualización de datos y seguimiento de equipos." },
+        { category: "FINANZAS", title: "Invoice Generator", description: "Generación de facturas con exportación a PDF, gestión de clientes e informes financieros." }
+      ]
+    },
+    about: {
+      tag: "03 — Sobre mí",
+      photoAlt: "David, retrato",
+      origin: "La Habana → Famalicão",
+      heading: ["De guía turístico\na ingeniero de ", "software", "."],
+      paragraphs: [
+        "Mi camino hacia el software no fue convencional. Empecé como guía turístico en Cuba, donde aprendí comunicación efectiva, resolución de problemas en tiempo real y atención al detalle.",
+        "Eso me enseñó a entender lo que la gente necesita de verdad. Hoy construyo backends en Java y Spring Boot, front ends en Angular y React, y las herramientas de IA que mantienen el ciclo ajustado."
+      ],
+      highlights: ["Código limpio y mantenible", "APIs REST bien diseñadas", "Bases de datos optimizadas", "Aprendizaje continuo"]
+    },
+    contact: {
+      heading: ["Construyamos algo ", "sólido", " juntos."],
+      description: "Abierto a proyectos freelance y colaboraciones a largo plazo. Backend, full stack o las herramientas de IA alrededor: convirtamos la idea en algo que corra en producción.",
+      hire: "Contrátame"
+    },
+    footer: { email: "Correo", credit: "Diseñado y construido con React & GSAP" }
   }
 }

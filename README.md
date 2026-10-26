@@ -1,8 +1,8 @@
-# 🚀 David | Backend Developer Portfolio
+# David | Backend Developer Portfolio
 
-Portfolio personal con React + Vite, diseño futurista en tonos verdes, animaciones GSAP y soporte multiidioma.
+Portfolio personal con React + Vite, diseño monocromo con un acento, animaciones GSAP y soporte multiidioma.
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 portfolio-react/
@@ -16,11 +16,10 @@ portfolio-react/
 │   │   ├── Hero.jsx / Hero.css
 │   │   ├── Icons.jsx
 │   │   ├── LanguageSwitcher.jsx / LanguageSwitcher.css
-│   │   ├── MatrixRain.jsx / MatrixRain.css
 │   │   ├── Navigation.jsx / Navigation.css
 │   │   ├── Projects.jsx / Projects.css
 │   │   ├── Skills.jsx / Skills.css
-│   │   └── Terminal.jsx / Terminal.css
+│   │   └── Stats.jsx / Stats.css
 │   ├── context/
 │   │   └── LanguageContext.jsx
 │   ├── data/
@@ -38,7 +37,7 @@ portfolio-react/
 └── README.md
 ```
 
-## 🛠️ Instalación
+## Instalación
 
 ```bash
 # Clonar o descomprimir el proyecto
@@ -57,7 +56,7 @@ npm run build
 npm run preview
 ```
 
-## 🚀 Despliegue en GitHub Pages
+## Despliegue en GitHub Pages
 
 ### Paso 1: Crear repositorio
 
@@ -97,19 +96,21 @@ También se puede lanzar a mano desde la pestaña Actions (`workflow_dispatch`).
 
 Tu sitio estará en: `https://tu-usuario.github.io/tu-repo/`
 
-## 🎨 Personalización
+## Personalización
 
 ### Información Personal
 
 Edita `src/data/content.js`:
 
 ```js
-export const personalInfo = {
-  name: "Tu Nombre",
-  yearsExperience: "X+",
-  projectsCount: "XX+",
-  dedication: "100%"
-}
+export const stats = [
+  { value: 3, suffix: '+' },
+  { value: 20, suffix: '+' },
+  { value: 4 },
+  { value: 'PT' }
+]
+
+export const location = "Tu Ciudad, XX"
 
 export const socialLinks = {
   email: "tu@email.com",
@@ -132,23 +133,26 @@ Cambia las variables CSS en `src/styles/index.css`:
 
 ```css
 :root {
-  --green-400: #34d399;
-  --green-500: #10b981;
+  --bg: #000;
+  --surface: #0a0a0a;
+  --muted: #797979;
+  --text-2: #a3a3a3;
+  --accent: #f97316;
   /* ... */
 }
 ```
 
-## ✨ Características
+## Características
 
-- ⚡ **Vite** - Build ultrarrápido
-- ⚛️ **React 18** - Última versión
-- 🎬 **GSAP** - Animaciones profesionales
-- 🌍 **i18n** - Inglés/Español
-- 📱 **Responsive** - Mobile-first
-- 🎨 **CSS Modules** - Estilos modulares
-- 🌙 **Tema oscuro** - Diseño futurista
+- **Vite** - Build ultrarrápido
+- **React 18** - Última versión
+- **GSAP** - Animaciones profesionales
+- **i18n** - Inglés/Español
+- **Responsive** - Mobile-first
+- **CSS Modules** - Estilos modulares
+- **Tema oscuro** - Diseño monocromo
 
-## 📦 Dependencias
+## Dependencias
 
 ```json
 {
@@ -158,10 +162,10 @@ Cambia las variables CSS en `src/styles/index.css`:
 }
 ```
 
-## 📄 Licencia
+## Licencia
 
 MIT License - Siéntete libre de usar y modificar este portfolio.
 
 ---
 
-Desarrollado con 💚 por David
+Desarrollado por David

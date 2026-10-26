@@ -4,55 +4,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export const useScrollAnimation = (animationConfig) => {
+// Runs setup(el) inside a gsap.matchMedia scope, only when motion is allowed; reverted on unmount.
+export const useGsap = (setup) => {
   const ref = useRef(null)
-
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      if (animationConfig.targets) {
-        gsap.fromTo(
-          animationConfig.targets,
-          animationConfig.from,
-          {
-            ...animationConfig.to,
-            scrollTrigger: {
-              trigger: ref.current,
-              start: animationConfig.start || "top 80%",
-              ...animationConfig.scrollTrigger
-            }
-          }
-        )
-      }
-    }, ref)
-
-    return () => ctx.revert()
+    const mm = gsap.matchMedia(ref.current)
+    mm.add('(prefers-reduced-motion: no-preference)', () => setup(ref.current))
+    return () => mm.revert()
   }, [])
-
-  return ref
-}
-
-export const useInitialAnimation = (animationConfig) => {
-  const ref = useRef(null)
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      if (animationConfig.targets) {
-        gsap.fromTo(
-          animationConfig.targets,
-          animationConfig.from,
-          animationConfig.to
-        )
-      } else {
-        gsap.fromTo(
-          ref.current,
-          animationConfig.from,
-          animationConfig.to
-        )
-      }
-    }, ref)
-
-    return () => ctx.revert()
-  }, [])
-
   return ref
 }

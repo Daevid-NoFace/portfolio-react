@@ -1,38 +1,62 @@
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
+import { useEffect, useState } from 'react'
 import { useLanguage } from '../context/LanguageContext'
+import { socialLinks } from '../data/content'
 import LanguageSwitcher from './LanguageSwitcher'
+import { GitHubIcon, MenuIcon, CloseIcon } from './Icons'
 import './Navigation.css'
 
+const ids = ['home', 'stack', 'work', 'about', 'contact']
+const observed = [...ids, 'stats']
+const clock = () => new Date().toLocaleTimeString('en-GB', { hour12: false })
+
 const Navigation = () => {
-  const navRef = useRef(null)
   const { t } = useLanguage()
+  const [time, setTime] = useState(clock)
+  const [open, setOpen] = useState(false)
+  const [active, setActive] = useState('home')
 
   useEffect(() => {
-    gsap.fromTo(navRef.current, 
-      { y: -100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 0.5 }
+    const id = setInterval(() => setTime(clock()), 1000)
+    return () => clearInterval(id)
+  }, [])
+
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) => entries.forEach((e) => e.isIntersecting && setActive(e.target.id === 'stats' ? 'home' : e.target.id)),
+      { rootMargin: '-40% 0px -55% 0px' }
     )
+    observed.forEach((id) => {
+      const el = document.getElementById(id)
+      if (el) io.observe(el)
+    })
+    return () => io.disconnect()
   }, [])
 
   return (
-    <nav ref={navRef} className="navigation">
-      <div className="logo">
-        <span className="logo-bracket">&lt;</span>
-        Daiv.code
-        <span className="logo-bracket">/&gt;</span>
+    <nav aria-label="Main" className="nav wrap" onKeyDown={(e) => e.key === 'Escape' && setOpen(false)}>
+      <span className="nav-clock mono">{time}</span>
+      <div id="nav-links" className={'nav-links' + (open ? ' open' : '')}>
+        {ids.map((id) => (
+          <a key={id} className={'navpill' + (active === id ? ' on' : '')} href={`#${id}`} onClick={() => setOpen(false)}>
+            {t.nav[id]}
+          </a>
+        ))}
       </div>
-      
-      <ul className="nav-links">
-        <li><a href="#inicio">{t.nav.home}</a></li>
-        <li><a href="#skills">{t.nav.skills}</a></li>
-        <li><a href="#proyectos">{t.nav.projects}</a></li>
-        <li><a href="#sobre-mi">{t.nav.about}</a></li>
-        <li><a href="#contacto">{t.nav.contact}</a></li>
-      </ul>
-      
       <div className="nav-right">
         <LanguageSwitcher />
+        <a className="nav-github icon-btn" href={socialLinks.github} aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <GitHubIcon />
+        </a>
+        <button
+          type="button"
+          className="nav-menu-btn hit44"
+          aria-label={open ? t.nav.closeMenu : t.nav.menu}
+          aria-expanded={open}
+          aria-controls="nav-links"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <CloseIcon /> : <MenuIcon />}
+        </button>
       </div>
     </nav>
   )

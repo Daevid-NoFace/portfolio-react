@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Daiv.code — Style tile</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#000}
+a{color:#fff;text-decoration:none}a:hover{color:#f97316}
+.lbl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#737373}
+.tag{display:inline-flex;align-items:center;height:34px;padding:0 14px;border:1px solid #2a2a2a;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#a3a3a3;white-space:nowrap}
+</style>
+</helmet>
+
+<div style="width: 1100px; height: 1560px; box-sizing: border-box; padding: 56px; background: #000; color: #fff; font-family: 'Inter Tight', system-ui, sans-serif; display: flex; flex-direction: column; gap: 48px; -webkit-font-smoothing: antialiased;">
+
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1px solid #1f1f1f; padding-bottom: 20px;">
+    <div>
+      <div class="lbl" style="margin-bottom: 10px;">Style tile — Daiv.code 2026</div>
+      <div style="font-weight: 800; font-size: 40px; letter-spacing: -0.04em; line-height: 1;">Monochrome, one accent.</div>
+    </div>
+    <div class="lbl">Inter Tight · JetBrains Mono</div>
+  </div>
+
+  <!-- COLORS -->
+  <div style="display: flex; flex-direction: column; gap: 16px;">
+    <div class="lbl">Color</div>
+    <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px;">
+      <div style="display: flex; flex-direction: column; gap: 10px;"><div style="height: 88px; border-radius: 12px; background: #000; border: 1px solid #1f1f1f;"></div><div style="font-size: 13px; font-weight: 600;">bg</div><div class="lbl">#000000</div></div>
+      <div style="display: flex; flex-direction: column; gap: 10px;"><div style="height: 88px; border-radius: 12px; background: #0a0a0a; border: 1px solid #1f1f1f;"></div><div style="font-size: 13px; font-weight: 600;">surface</div><div class="lbl">#0a0a0a</div></div>
+      <div style="display: flex; flex-direction: column; gap: 10px;"><div style="height: 88px; border-radius: 12px; background: #1f1f1f;"></div><div style="font-size: 13px; font-weight: 600;">border</div><div class="lbl">#1f1f1f</div></div>
+      <div style="display: flex; flex-direction: column; gap: 10px;"><div style="height: 88px; border-radius: 12px; background: #737373;"></div><div style="font-size: 13px; font-weight: 600;">muted</div><div class="lbl">#737373 · 4.7:1</div></div>
+      <div style="display: flex; flex-direction: column; gap: 10px;"><div style="height: 88px; border-radius: 12px; background: #a3a3a3;"></div><div style="font-size: 13px; font-weight: 600;">text-2</div><div class="lbl">#a3a3a3 · 8.5:1</div></div>
+      <div style="display: flex; flex-direction: column; gap: 10px;"><div style="height: 88px; border-radius: 12px; background: #ffffff;"></div><div style="font-size: 13px; font-weight: 600;">text</div><div class="lbl">#ffffff</div></div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px;">
+      <div style="display: flex; flex-direction: column; gap: 10px;"><div style="height: 88px; border-radius: 12px; background: {{accent}};"></div><div style="font-size: 13px; font-weight: 600;">accent</div><div class="lbl">#f97316 · 7.6:1</div></div>
+      <div style="grid-column: span 5; display: flex; align-items: center; font-size: 14px; line-height: 1.6; color: #a3a3a3; padding-left: 8px;">Accent is for one word, one dot, one glyph per screen. Never a background, never a gradient, never a border. Everything else is lightness only.</div>
+    </div>
+  </div>
+
+  <!-- TYPE -->
+  <div style="display: flex; flex-direction: column; gap: 16px;">
+    <div class="lbl">Type</div>
+    <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 12px 32px; align-items: baseline; border-top: 1px solid #1f1f1f;">
+      <div class="lbl" style="padding-top: 20px;">Display · 900 · -0.045em · 0.86</div>
+      <div style="padding-top: 12px; font-weight: 900; font-size: 112px; line-height: 0.86; letter-spacing: -0.045em; text-transform: uppercase;">Soft<svg viewBox="0 0 24 24" style="width: 0.62em; height: 0.78em; vertical-align: -0.06em;" role="img" aria-label="lightning bolt"><path d="M13 2 4 14h7l-2 8 9-12h-7l2-8z" fill="{{accent}}"/></svg>ware</div>
+      <div class="lbl" style="padding-top: 20px; border-top: 1px solid #1f1f1f;">H2 · 800 · -0.04em</div>
+      <div style="padding-top: 20px; border-top: 1px solid #1f1f1f; font-weight: 800; font-size: 56px; line-height: 0.95; letter-spacing: -0.04em; text-transform: uppercase;">What I work with</div>
+      <div class="lbl" style="padding-top: 20px; border-top: 1px solid #1f1f1f;">H3 · 800 · -0.03em</div>
+      <div style="padding-top: 20px; border-top: 1px solid #1f1f1f; font-weight: 800; font-size: 32px; line-height: 1; letter-spacing: -0.03em;">Backend &amp; data</div>
+      <div class="lbl" style="padding-top: 20px; border-top: 1px solid #1f1f1f;">Body · 500 · 16/1.6</div>
+      <div style="padding-top: 20px; border-top: 1px solid #1f1f1f; font-size: 16px; line-height: 1.6; color: #a3a3a3; max-width: 560px;">Backend first, full stack by necessity. The tools below are the ones I ship with every week, not a wish list.</div>
+      <div class="lbl" style="padding-top: 20px; border-top: 1px solid #1f1f1f;">Micro · Mono · 11 · 0.14em</div>
+      <div style="padding-top: 20px; border-top: 1px solid #1f1f1f; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3a3a3;">Open to all forms of collaboration, regardless of location and language.</div>
+    </div>
+  </div>
+
+  <!-- COMPONENTS -->
+  <div style="display: flex; flex-direction: column; gap: 16px;">
+    <div class="lbl">Components</div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 40px; border-top: 1px solid #1f1f1f; padding-top: 24px;">
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div class="lbl">Nav pills · 36px</div>
+        <div style="display: flex; gap: 4px;">
+          <a href="#" style="padding: 8px 16px; border-radius: 999px; font-size: 13px; font-weight: 600; background: #fff; color: #000;">Home</a>
+          <a href="#" style="padding: 8px 16px; border-radius: 999px; font-size: 13px; font-weight: 600; color: #a3a3a3;">Stack</a>
+          <a href="#" style="padding: 8px 16px; border-radius: 999px; font-size: 13px; font-weight: 600; color: #a3a3a3;">Work</a>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div class="lbl">Status badges</div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <span style="display: inline-flex; align-items: center; gap: 10px; height: 32px; padding: 0 14px; border-radius: 999px; background: #111; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #a3a3a3;"><span style="width: 6px; height: 6px; border-radius: 999px; background: {{accent}}; display: inline-block;"></span>Professional statistics</span>
+          <span style="display: inline-flex; align-items: center; gap: 10px; height: 32px; padding: 0 14px; border-radius: 999px; border: 1px solid #1f1f1f; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #a3a3a3;"><span style="width: 6px; height: 6px; border-radius: 999px; background: {{accent}}; display: inline-block;"></span>Available</span>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div class="lbl">Buttons · 52px pill</div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <a href="#" style="display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 26px; border-radius: 999px; background: #fff; color: #000; font-weight: 600; font-size: 15px;">Hire me</a>
+          <a href="#" style="display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid #333; color: #fff; font-weight: 600; font-size: 15px;">View my resume</a>
+          <a href="#" aria-label="Scroll" style="width: 44px; height: 44px; align-self: center; border-radius: 999px; background: #fff; color: #000; display: inline-flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7l10 10M17 7v10H7"/></svg></a>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div class="lbl">Tech tags · 34px · mono</div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;"><span class="tag">Spring Boot</span><span class="tag">Angular</span><span class="tag">FastAPI</span><span class="tag">Docker</span></div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div class="lbl">Stat cell</div>
+        <div style="border: 1px solid #1f1f1f; border-radius: 16px; background: #0a0a0a; padding: 24px; text-align: center; max-width: 220px;">
+          <div class="lbl" style="margin-bottom: 10px;">Years experience</div>
+          <div style="font-weight: 800; font-size: 40px; letter-spacing: -0.03em;">3+</div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div class="lbl">Project card · radius 20 · hover border #fff</div>
+        <div style="border: 1px solid #1f1f1f; background: #0a0a0a; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #737373;">01 / E-COMMERCE</span>
+            <span style="width: 36px; height: 36px; border-radius: 999px; border: 1px solid #2a2a2a; display: inline-flex; align-items: center; justify-content: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </div>
+          <div style="font-weight: 800; font-size: 26px; line-height: 1; letter-spacing: -0.03em;">E-Commerce Platform</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#f97316","options":["#f97316","#38bdf8","#34d399","#ffffff"]},"$preview":{"width":1100,"height":1560}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#f97316' };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,78 +1,32 @@
-import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLanguage } from '../context/LanguageContext'
-import { CheckIcon } from './Icons'
+import { useGsap } from '../hooks/useAnimations'
 import './About.css'
 
-gsap.registerPlugin(ScrollTrigger)
-
 const About = () => {
-  const sectionRef = useRef(null)
   const { t } = useLanguage()
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(".about-image",
-        { opacity: 0, x: -50 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1,
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 70%",
-          }
-        }
-      )
-      
-      gsap.fromTo(".about-text",
-        { opacity: 0, x: 50 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1,
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 70%",
-          }
-        }
-      )
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
+  const [before, grey, after] = t.about.heading
+  const ref = useGsap((el) => {
+    gsap.from(el.querySelector('.about-photo'), { x: -40, opacity: 0, duration: 0.9, scrollTrigger: { trigger: el, start: 'top 70%' } })
+    gsap.from(el.querySelector('.about-text'), { x: 40, opacity: 0, duration: 0.9, scrollTrigger: { trigger: el, start: 'top 70%' } })
+  })
 
   return (
-    <section id="sobre-mi" ref={sectionRef} className="about-section">
-      <div className="section-header">
-        <span className="section-tag">{t.about.tag}</span>
-        <h2 className="section-title">{t.about.title}</h2>
-      </div>
-      
-      <div className="about-content">
-        <div className="about-image">
-          <div className="about-image-frame">
-            <img src="david.webp" alt="Profile" className="about-profile-image" />
-          </div>
-          <div className="about-decorator decorator-1" />
-          <div className="about-decorator decorator-2" />
+    <section id="about" className="about wrap" ref={ref}>
+      <p className="section-tag about-tag">{t.about.tag}</p>
+      <div className="about-grid">
+        <div className="about-photo">
+          <img src="david.webp" alt={t.about.photoAlt} loading="lazy" width="800" height="1000" />
+          <span className="badge about-origin">{t.about.origin}</span>
         </div>
-        
         <div className="about-text">
-          <h3>{t.about.heading}</h3>
-          {t.about.paragraphs.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
-          
-          <div className="about-highlights">
-            {t.about.highlights.map((highlight, index) => (
-              <div className="highlight" key={index}>
-                <div className="highlight-icon"><CheckIcon /></div>
-                <span className="highlight-text">{highlight}</span>
-              </div>
+          <h2>{before}<span className="about-grey">{grey}</span>{after}</h2>
+          {t.about.paragraphs.map((p) => <p key={p}>{p}</p>)}
+          <ul className="about-highlights">
+            {t.about.highlights.map((h, i) => (
+              <li key={h}><span className="mono about-index">{String(i + 1).padStart(2, '0')}</span>{h}</li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>

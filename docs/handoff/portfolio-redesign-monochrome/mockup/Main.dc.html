@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Daiv.code — Home (desktop)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#000}
+a{color:#fff;text-decoration:none}a:hover{color:#f97316}
+.navpill{padding:8px 16px;border-radius:999px;font-size:13px;font-weight:600;color:#a3a3a3}
+.navpill:hover{color:#fff}
+.navpill.on{background:#fff;color:#000}
+.navpill.on:hover{color:#000}
+.tag{display:inline-flex;align-items:center;height:34px;padding:0 14px;border:1px solid #2a2a2a;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#a3a3a3;white-space:nowrap}
+.card{border:1px solid #1f1f1f;background:#0a0a0a;border-radius:20px;transition:border-color .2s}
+.card:hover{border-color:#fff}
+.card:hover .arrow{transform:translate(4px,-4px)}
+.arrow{transition:transform .2s}
+.btn-solid{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 26px;border-radius:999px;background:#fff;color:#000;font-weight:600;font-size:15px}
+.btn-solid:hover{background:#f97316;color:#000}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 26px;border-radius:999px;border:1px solid #333;color:#fff;font-weight:600;font-size:15px}
+.btn-ghost:hover{border-color:#fff;color:#fff}
+.skillrow{border-top:1px solid #1f1f1f}
+.skillrow:last-child{border-bottom:1px solid #1f1f1f}
+.hl{display:inline-block;height:36px}
+</style>
+</helmet>
+
+<div style="font-family: 'Inter Tight', system-ui, sans-serif; background: #000; color: #fff; min-height: 100vh; -webkit-font-smoothing: antialiased;">
+
+  <!-- NAV -->
+  <nav aria-label="Main" style="max-width: 1360px; margin: 0 auto; padding: 24px 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; letter-spacing: 0.12em; color: #fff; min-width: 120px;">16:42:07</div>
+    <div style="display: flex; align-items: center; gap: 4px;">
+      <a class="navpill on" href="#home">Home</a>
+      <a class="navpill" href="#stack">Stack</a>
+      <a class="navpill" href="#work">Work</a>
+      <a class="navpill" href="#about">About</a>
+      <a class="navpill" href="#contact">Contact</a>
+    </div>
+    <div style="display: flex; align-items: center; gap: 6px; min-width: 120px; justify-content: flex-end;">
+      <button type="button" aria-label="Switch language to Spanish" style="height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid #2a2a2a; background: transparent; color: #a3a3a3; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; cursor: pointer;">EN / ES</button>
+      <a href="https://github.com/Daevid-NoFace" aria-label="GitHub" style="width: 36px; height: 36px; border-radius: 999px; border: 1px solid #2a2a2a; display: inline-flex; align-items: center; justify-content: center; color: #a3a3a3;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1s-1.2-.4-3.9 1.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.5 3.3 6.7 6.4 7a3.4 3.4 0 0 0-.9 2.6V23"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" style="position: relative; max-width: 1360px; margin: 0 auto; padding: 72px 40px 40px; min-height: 760px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
+    <div aria-hidden="true" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%) rotate(180deg); writing-mode: vertical-rl; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.22em; color: #737373; padding: 14px 10px; border: 1px solid #1f1f1f; border-left: 0; border-radius: 0 10px 10px 0;">AVAILABLE FOR OPPORTUNITIES</div>
+
+    <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 32px; align-items: center;">
+      <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.7; letter-spacing: 0.12em; text-transform: uppercase; color: #a3a3a3; max-width: 240px; justify-self: end; text-align: right; align-self: start; padding-top: 24px;">Hi, I'm David. I build scalable systems, from Java &amp; Spring backends to Angular &amp; React fronts and AI tooling.</p>
+
+      <h1 style="margin: 0; font-weight: 900; font-size: clamp(64px, 11vw, 164px); line-height: 0.86; letter-spacing: -0.045em; text-transform: uppercase; text-align: center; color: #fff;">
+        <span style="display: block;">Full stack</span>
+        <span style="display: block; white-space: nowrap;">Soft<svg viewBox="0 0 24 24" style="width: 0.62em; height: 0.78em; vertical-align: -0.06em; margin: 0 0.02em;" role="img" aria-label="lightning bolt"><path d="M13 2 4 14h7l-2 8 9-12h-7l2-8z" fill="{{accent}}"/></svg>ware</span>
+        <span style="display: block;">Engineer</span>
+      </h1>
+
+      <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.7; letter-spacing: 0.12em; text-transform: uppercase; color: #a3a3a3; max-width: 240px; align-self: end; padding-bottom: 24px;">Open to all forms of collaboration, regardless of location and language.</p>
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; border-top: 1px solid #1f1f1f; padding-top: 20px; margin-top: 56px;">
+      <a href="https://github.com/Daevid-NoFace" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3a3a3;">github.com/Daevid-NoFace</a>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3a3a3;">Famalicão, PT — 2026</span>
+        <a href="#stats" aria-label="Scroll down" style="width: 44px; height: 44px; border-radius: 999px; background: #fff; color: #000; display: inline-flex; align-items: center; justify-content: center;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7l10 10M17 7v10H7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats" style="max-width: 1360px; margin: 0 auto; padding: 120px 40px 100px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; gap: 40px;">
+    <div style="display: inline-flex; align-items: center; gap: 10px; height: 32px; padding: 0 14px; border-radius: 999px; background: #111; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #a3a3a3;">
+      <span style="width: 6px; height: 6px; border-radius: 999px; background: {{accent}}; display: inline-block;"></span>
+      Professional statistics
+    </div>
+    <h2 style="margin: 0; font-weight: 800; font-size: clamp(32px, 4vw, 56px); line-height: 1.05; letter-spacing: -0.03em; text-align: center; max-width: 900px; color: #fff;">Java that scales. Fronts that ship.<br>Tools that think. One engineer <span style="color: {{accent}};">behind the work.</span></h2>
+    <dl style="margin: 0; width: 100%; max-width: 1000px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border: 1px solid #1f1f1f; border-radius: 16px; background: #0a0a0a; overflow: hidden;">
+      <div style="padding: 28px 24px; text-align: center; border-right: 1px solid #1f1f1f;">
+        <dt style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #737373; margin-bottom: 10px;">Years experience</dt>
+        <dd style="margin: 0; font-weight: 800; font-size: 40px; letter-spacing: -0.03em; color: #fff;">3+</dd>
+      </div>
+      <div style="padding: 28px 24px; text-align: center; border-right: 1px solid #1f1f1f;">
+        <dt style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #737373; margin-bottom: 10px;">Projects shipped</dt>
+        <dd style="margin: 0; font-weight: 800; font-size: 40px; letter-spacing: -0.03em; color: #fff;">20+</dd>
+      </div>
+      <div style="padding: 28px 24px; text-align: center; border-right: 1px solid #1f1f1f;">
+        <dt style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #737373; margin-bottom: 10px;">Stacks in production</dt>
+        <dd style="margin: 0; font-weight: 800; font-size: 40px; letter-spacing: -0.03em; color: #fff;">4</dd>
+      </div>
+      <div style="padding: 28px 24px; text-align: center;">
+        <dt style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #737373; margin-bottom: 10px;">Based in</dt>
+        <dd style="margin: 0; font-weight: 800; font-size: 40px; letter-spacing: -0.03em; color: #fff;">PT</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="stack" style="max-width: 1360px; margin: 0 auto; padding: 100px 40px; box-sizing: border-box;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 48px;">
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: {{accent}}; margin-bottom: 16px;">01 — Stack</div>
+        <h2 style="margin: 0; font-weight: 800; font-size: clamp(40px, 5.5vw, 76px); line-height: 0.95; letter-spacing: -0.04em; text-transform: uppercase; color: #fff;">What I work<br>with</h2>
+      </div>
+      <p style="margin: 0; max-width: 360px; font-size: 16px; line-height: 1.6; color: #a3a3a3;">Backend first, full stack by necessity. The tools below are the ones I ship with every week, not a wish list.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column;">
+      <div class="skillrow" style="display: grid; grid-template-columns: 80px minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; padding: 40px 0; align-items: start;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #737373; padding-top: 8px;">01</div>
+        <div>
+          <h3 style="margin: 0 0 12px; font-weight: 800; font-size: 32px; line-height: 1; letter-spacing: -0.03em; text-transform: uppercase; color: #fff;">Backend &amp; data</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #a3a3a3; max-width: 480px;">RESTful APIs and services with Java and Spring Boot. Relational schemas designed and tuned, caching where it earns its place.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Spring Security</span><span class="tag">JPA / Hibernate</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Redis</span>
+        </div>
+      </div>
+
+      <div class="skillrow" style="display: grid; grid-template-columns: 80px minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; padding: 40px 0; align-items: start;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #737373; padding-top: 8px;">02</div>
+        <div>
+          <h3 style="margin: 0 0 12px; font-weight: 800; font-size: 32px; line-height: 1; letter-spacing: -0.03em; text-transform: uppercase; color: #fff;">Frontend</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #a3a3a3; max-width: 480px;">Angular with Tailwind on production dashboards, React and Astro for sites and portfolios. Typed end to end.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span class="tag">Angular</span><span class="tag">TailwindCSS</span><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Astro</span>
+        </div>
+      </div>
+
+      <div class="skillrow" style="display: grid; grid-template-columns: 80px minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; padding: 40px 0; align-items: start;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #737373; padding-top: 8px;">03</div>
+        <div>
+          <h3 style="margin: 0 0 12px; font-weight: 800; font-size: 32px; line-height: 1; letter-spacing: -0.03em; text-transform: uppercase; color: #fff;">AI tooling</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #a3a3a3; max-width: 480px;">Python services and MCP servers that give agents real data. Multi-agent workflows wired into the dev loop, not demos.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">MCP servers</span><span class="tag">Agent workflows</span><span class="tag">Claude Code</span>
+        </div>
+      </div>
+
+      <div class="skillrow" style="display: grid; grid-template-columns: 80px minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; padding: 40px 0; align-items: start;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #737373; padding-top: 8px;">04</div>
+        <div>
+          <h3 style="margin: 0 0 12px; font-weight: 800; font-size: 32px; line-height: 1; letter-spacing: -0.03em; text-transform: uppercase; color: #fff;">DevOps &amp; tools</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #a3a3a3; max-width: 480px;">Containers, CI pipelines and Linux boxes. Deploys that are boring on purpose.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">Git</span><span class="tag">Linux</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="work" style="max-width: 1360px; margin: 0 auto; padding: 100px 40px; box-sizing: border-box;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 48px;">
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: {{accent}}; margin-bottom: 16px;">02 — Selected work</div>
+        <h2 style="margin: 0; font-weight: 800; font-size: clamp(40px, 5.5vw, 76px); line-height: 0.95; letter-spacing: -0.04em; text-transform: uppercase; color: #fff;">Things I<br>shipped</h2>
+      </div>
+      <a href="https://github.com/Daevid-NoFace" style="display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #a3a3a3;">All repositories
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+      </a>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px;">
+      <article class="card" style="padding: 36px; display: flex; flex-direction: column; gap: 20px; min-height: 320px; box-sizing: border-box;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #737373;">01 / E-COMMERCE</span>
+          <a class="arrow" href="#" aria-label="Open E-Commerce Platform" style="width: 40px; height: 40px; border-radius: 999px; border: 1px solid #2a2a2a; display: inline-flex; align-items: center; justify-content: center; color: #fff;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3 style="margin: 0; font-weight: 800; font-size: 36px; line-height: 1; letter-spacing: -0.03em; color: #fff;">E-Commerce Platform</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #a3a3a3; flex-grow: 1;">Full e-commerce platform with Stripe payments, inventory management and an admin panel.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span class="tag">Spring Boot</span><span class="tag">PostgreSQL</span><span class="tag">Astro</span><span class="tag">Stripe API</span>
+        </div>
+        <div style="display: flex; gap: 20px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;">
+          <a href="#" style="color: #fff; border-bottom: 1px solid #333; padding-bottom: 2px;">Code</a>
+          <a href="#" style="color: #fff; border-bottom: 1px solid #333; padding-bottom: 2px;">Demo</a>
+        </div>
+      </article>
+
+      <article class="card" style="padding: 36px; display: flex; flex-direction: column; gap: 20px; min-height: 320px; box-sizing: border-box;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #737373;">02 / CONTENT</span>
+          <a class="arrow" href="#" aria-label="Open Blog System" style="width: 40px; height: 40px; border-radius: 999px; border: 1px solid #2a2a2a; display: inline-flex; align-items: center; justify-content: center; color: #fff;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3 style="margin: 0; font-weight: 800; font-size: 36px; line-height: 1; letter-spacing: -0.03em; color: #fff;">Blog System</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #a3a3a3; flex-grow: 1;">Full-stack blog with JWT authentication, a rich content editor and SEO optimisation.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span class="tag">Java</span><span class="tag">Spring Security</span><span class="tag">React</span><span class="tag">TailwindCSS</span>
+        </div>
+        <div style="display: flex; gap: 20px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;">
+          <a href="#" style="color: #fff; border-bottom: 1px solid #333; padding-bottom: 2px;">Code</a>
+          <a href="#" style="color: #fff; border-bottom: 1px solid #333; padding-bottom: 2px;">Demo</a>
+        </div>
+      </article>
+
+      <article class="card" style="padding: 36px; display: flex; flex-direction: column; gap: 20px; min-height: 320px; box-sizing: border-box;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #737373;">03 / DATA</span>
+          <a class="arrow" href="#" aria-label="Open Sports Stats Platform" style="width: 40px; height: 40px; border-radius: 999px; border: 1px solid #2a2a2a; display: inline-flex; align-items: center; justify-content: center; color: #fff;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3 style="margin: 0; font-weight: 800; font-size: 36px; line-height: 1; letter-spacing: -0.03em; color: #fff;">Sports Stats Platform</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #a3a3a3; flex-grow: 1;">Real-time sports statistics with data visualisation and team tracking.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span class="tag">Spring Boot</span><span class="tag">PostgreSQL</span><span class="tag">REST API</span><span class="tag">Charts</span>
+        </div>
+        <div style="display: flex; gap: 20px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;">
+          <a href="#" style="color: #fff; border-bottom: 1px solid #333; padding-bottom: 2px;">Code</a>
+          <a href="#" style="color: #fff; border-bottom: 1px solid #333; padding-bottom: 2px;">Demo</a>
+        </div>
+      </article>
+
+      <article class="card" style="padding: 36px; display: flex; flex-direction: column; gap: 20px; min-height: 320px; box-sizing: border-box;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #737373;">04 / FINANCE</span>
+          <a class="arrow" href="#" aria-label="Open Invoice Generator" style="width: 40px; height: 40px; border-radius: 999px; border: 1px solid #2a2a2a; display: inline-flex; align-items: center; justify-content: center; color: #fff;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <h3 style="margin: 0; font-weight: 800; font-size: 36px; line-height: 1; letter-spacing: -0.03em; color: #fff;">Invoice Generator</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #a3a3a3; flex-grow: 1;">Invoice generation with PDF export, client management and financial reports.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span class="tag">Java</span><span class="tag">Thymeleaf</span><span class="tag">PostgreSQL</span><span class="tag">iText PDF</span>
+        </div>
+        <div style="display: flex; gap: 20px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;">
+          <a href="#" style="color: #fff; border-bottom: 1px solid #333; padding-bottom: 2px;">Code</a>
+          <a href="#" style="color: #fff; border-bottom: 1px solid #333; padding-bottom: 2px;">Demo</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" style="max-width: 1360px; margin: 0 auto; padding: 100px 40px; box-sizing: border-box;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: {{accent}}; margin-bottom: 40px;">03 — About</div>
+    <div style="display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 64px; align-items: center;">
+      <div style="position: relative;">
+        <img src="/_blob/64a5f9362b14314c556b75b57d2089c3" alt="David, portrait" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 20px; filter: grayscale(100%) contrast(1.05);">
+        <div style="position: absolute; left: 20px; bottom: 20px; display: inline-flex; align-items: center; gap: 10px; height: 34px; padding: 0 14px; border-radius: 999px; background: rgba(0,0,0,0.75); backdrop-filter: blur(8px); font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #fff;">
+          <span style="width: 6px; height: 6px; border-radius: 999px; background: {{accent}}; display: inline-block;"></span>
+          Havana → Famalicão
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <h2 style="margin: 0; font-weight: 800; font-size: clamp(36px, 4.2vw, 60px); line-height: 0.98; letter-spacing: -0.035em; color: #fff;">From tour guide<br>to <span style="color: #737373;">software</span> engineer.</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #a3a3a3;">My path to software wasn't conventional. I started as a tour guide in Cuba, where I learned effective communication, real-time problem solving and attention to detail.</p>
+        <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #a3a3a3;">That taught me to understand what people actually need. Today I build backends in Java and Spring Boot, front ends in Angular and React, and the AI tooling that keeps the loop tight.</p>
+        <ul style="list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px;">
+          <li style="display: flex; align-items: center; gap: 12px; padding: 14px 0; border-top: 1px solid #1f1f1f; font-size: 15px; color: #fff;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: {{accent}};">01</span>Clean, maintainable code</li>
+          <li style="display: flex; align-items: center; gap: 12px; padding: 14px 0; border-top: 1px solid #1f1f1f; font-size: 15px; color: #fff;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: {{accent}};">02</span>Well-designed REST APIs</li>
+          <li style="display: flex; align-items: center; gap: 12px; padding: 14px 0; border-top: 1px solid #1f1f1f; font-size: 15px; color: #fff;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: {{accent}};">03</span>Optimised databases</li>
+          <li style="display: flex; align-items: center; gap: 12px; padding: 14px 0; border-top: 1px solid #1f1f1f; font-size: 15px; color: #fff;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: {{accent}};">04</span>Continuous learning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" style="max-width: 1360px; margin: 0 auto; padding: 140px 40px 120px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px;">
+    <h2 style="margin: 0; font-weight: 800; font-size: clamp(44px, 6.5vw, 92px); line-height: 0.95; letter-spacing: -0.04em; color: #fff; max-width: 1000px;">Let's build something <span style="color: #737373;">solid</span> together.</h2>
+    <p style="margin: 0; max-width: 520px; font-size: 17px; line-height: 1.65; color: #a3a3a3;">Open to freelance projects and long-term collaborations. Backend, full stack or the AI tooling around it: let's turn the idea into something that runs in production.</p>
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 8px;">
+      <a class="btn-solid" href="mailto:dmartinezgonzalez524@gmail.com">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        Hire me
+      </a>
+      <a class="btn-ghost" href="#">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>
+        View my resume
+      </a>
+    </div>
+    <a href="mailto:dmartinezgonzalez524@gmail.com" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #737373; margin-top: 8px;">dmartinezgonzalez524@gmail.com</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="max-width: 1360px; margin: 0 auto; padding: 28px 40px 40px; box-sizing: border-box; border-top: 1px solid #1f1f1f; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #737373;">
+    <span style="color: #fff;">© 2026 Daiv.code</span>
+    <span>Designed and built with React &amp; GSAP</span>
+    <div style="display: flex; gap: 20px;">
+      <a href="https://github.com/Daevid-NoFace" style="color: #a3a3a3;">GitHub</a>
+      <a href="https://linkedin.com/in/tu-usuario" style="color: #a3a3a3;">LinkedIn</a>
+      <a href="mailto:dmartinezgonzalez524@gmail.com" style="color: #a3a3a3;">Email</a>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#f97316","options":["#f97316","#38bdf8","#34d399","#ffffff"]},"$preview":{"width":1440,"height":4760}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#f97316' };
+  }
+}
+</script>
+</body>
+</html>
