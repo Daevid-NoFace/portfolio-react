@@ -1,70 +1,52 @@
-import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLanguage } from '../context/LanguageContext'
-import { projectsData } from '../data/content'
-import { GitHubIcon, ExternalLinkIcon } from './Icons'
+import { projectsData, socialLinks } from '../data/content'
+import { useGsap } from '../hooks/useAnimations'
+import { ArrowUpRightIcon } from './Icons'
 import './Projects.css'
 
-gsap.registerPlugin(ScrollTrigger)
-
 const Projects = () => {
-  const sectionRef = useRef(null)
   const { t } = useLanguage()
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(".project-card",
-        { opacity: 0, y: 60 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          stagger: 0.2,
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 75%",
-          }
-        }
-      )
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
+  const ref = useGsap((el) => {
+    gsap.from(el.querySelectorAll('.card'), {
+      y: 24, opacity: 0, duration: 0.7, stagger: 0.1, scrollTrigger: { trigger: el, start: 'top 80%' }
+    })
+  })
 
   return (
-    <section id="proyectos" ref={sectionRef} className="projects-section">
+    <section id="work" className="projects wrap" ref={ref}>
       <div className="section-header">
-        <span className="section-tag">{t.projects.tag}</span>
-        <h2 className="section-title">{t.projects.title}</h2>
-        <p className="section-subtitle">{t.projects.subtitle}</p>
+        <div>
+          <p className="section-tag">{t.projects.tag}</p>
+          <h2 className="section-title">{t.projects.title}</h2>
+        </div>
+        <a className="projects-all mono" href={socialLinks.github} target="_blank" rel="noopener noreferrer">
+          {t.projects.all} <ArrowUpRightIcon size={14} />
+        </a>
       </div>
-      
       <div className="projects-grid">
-        {projectsData.map((project, index) => (
-          <div className="project-card" key={index}>
-            <div className="project-image">
-              {project.emoji}
-            </div>
-            <div className="project-content">
-              <h3>{t.projects.items[index].title}</h3>
-              <p>{t.projects.items[index].description}</p>
-              <div className="project-tech">
-                {project.tech.map((tech, i) => (
-                  <span key={i}>{tech}</span>
-                ))}
-              </div>
-              <div className="project-links">
-                <a href={project.github} className="project-link">
-                  <GitHubIcon /> {t.projects.code}
-                </a>
-                <a href={project.demo} className="project-link">
-                  <ExternalLinkIcon /> {t.projects.demo}
+        {projectsData.map((project, i) => {
+          const item = t.projects.items[i]
+          return (
+            <article className="card" key={i}>
+              <div className="card-top">
+                <span className="card-index mono">{String(i + 1).padStart(2, '0')} / {item.category}</span>
+                <a className="card-arrow icon-btn hit44" href={project.demo} aria-label={`${t.projects.open} ${item.title}`}>
+                  <ArrowUpRightIcon />
                 </a>
               </div>
-            </div>
-          </div>
-        ))}
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <div className="card-tags">
+                {project.tech.map((tech) => <span className="tag" key={tech}>{tech}</span>)}
+              </div>
+              <div className="card-links mono">
+                <a href={project.github}>{t.projects.code}</a>
+                <a href={project.demo}>{t.projects.demo}</a>
+              </div>
+            </article>
+          )
+        })}
       </div>
     </section>
   )

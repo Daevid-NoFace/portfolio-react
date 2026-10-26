@@ -1,145 +1,36 @@
-.about-section {
-  padding: 6rem 3rem;
-  max-width: 1400px;
-  margin: 0 auto;
+.about { padding-top: 80px; padding-bottom: 80px; overflow-x: clip; }
+.about-tag { margin-bottom: 40px; }
+.about-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: center; }
+.about-photo { position: relative; }
+.about-photo img {
+  display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover;
+  border-radius: 20px; filter: grayscale(100%) contrast(1.05);
 }
-
-.about-content {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
-  align-items: center;
+.about-origin {
+  position: absolute; left: 20px; bottom: 20px; background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px); color: #fff;
 }
-
-.about-image {
-  position: relative;
+.about-text { display: flex; flex-direction: column; gap: 24px; }
+.about-text h2 {
+  font-weight: 800; font-size: clamp(36px, 4.2vw, 60px); line-height: 0.98; letter-spacing: -0.035em; white-space: pre-line;
 }
-
-.about-profile-image {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  object-fit: cover;
-  z-index: 1;
-  position: relative;
+.about-grey { color: var(--muted); }
+.about-text p { font-size: 17px; line-height: 1.65; color: var(--text-2); }
+.about-highlights { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; }
+.about-highlights li {
+  display: flex; align-items: center; gap: 12px; padding: 14px 0; border-top: 1px solid var(--border);
+  font-size: 15px; color: #fff;
 }
-
-.about-image-frame {
-  width: 100%;
-  aspect-ratio: 1;
-  background: linear-gradient(135deg, var(--green-900), var(--bg-secondary));
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 8rem;
-  border: 2px solid rgba(52, 211, 153, 0.2);
-  position: relative;
-  overflow: hidden;
-}
-
-.about-image-frame::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(45deg, transparent 30%, rgba(52, 211, 153, 0.1) 50%, transparent 70%);
-  animation: shimmer 3s infinite;
-}
-
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-
-.about-decorator {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border: 2px solid var(--green-500);
-  border-radius: 12px;
-}
-
-.decorator-1 {
-  top: -20px;
-  right: -20px;
-  border-left: none;
-  border-bottom: none;
-}
-
-.decorator-2 {
-  bottom: -20px;
-  left: -20px;
-  border-right: none;
-  border-top: none;
-}
-
-.about-text h3 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.about-text p {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
-  margin-bottom: 1.25rem;
-}
-
-.about-highlights {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.highlight {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1rem;
-  background: rgba(52, 211, 153, 0.05);
-  border-radius: 8px;
-  border: 1px solid rgba(52, 211, 153, 0.1);
-}
-
-.highlight-icon {
-  width: 40px;
-  height: 40px;
-  background: rgba(52, 211, 153, 0.1);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--green-400);
-  flex-shrink: 0;
-}
-
-.highlight-icon svg {
-  width: 20px;
-  height: 20px;
-}
-
-.highlight-text {
-  font-size: 0.95rem;
-  color: var(--text-primary);
-}
-
-@media (max-width: 1024px) {
-  .about-content {
-    grid-template-columns: 1fr;
-  }
-
-  .about-image {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-}
+.about-index { font-size: 11px; color: var(--accent); }
 
 @media (max-width: 768px) {
-  .about-section {
-    padding: 4rem 1.5rem;
-  }
-
-  .about-highlights {
-    grid-template-columns: 1fr;
-  }
+  .about { padding-top: 56px; padding-bottom: 56px; }
+  .about-tag { margin-bottom: 0; }
+  .about-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .about-photo img { border-radius: 16px; }
+  .about-origin { left: 14px; bottom: 14px; }
+  .about-text h2 { font-size: 36px; white-space: normal; }
+  .about-text p { font-size: 15px; }
+  .about-highlights { grid-template-columns: 1fr; gap: 0; }
+  .about-highlights li:last-child { border-bottom: 1px solid var(--border); }
 }

@@ -1,56 +1,33 @@
-import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLanguage } from '../context/LanguageContext'
 import { socialLinks } from '../data/content'
-import { EmailIcon, GitHubIcon, LinkedInIcon } from './Icons'
+import { useGsap } from '../hooks/useAnimations'
+import { MailIcon } from './Icons'
 import './Contact.css'
 
-gsap.registerPlugin(ScrollTrigger)
+const words = (text, extra = '') =>
+  text.split(' ').filter(Boolean).map((w, i) => (
+    <span key={i}><span className={'cta-word ' + extra}>{w}</span>{' '}</span>
+  ))
 
 const Contact = () => {
-  const sectionRef = useRef(null)
   const { t } = useLanguage()
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(".contact-wrapper",
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 80%",
-          }
-        }
-      )
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
+  const [before, grey, after] = t.contact.heading
+  const ref = useGsap((el) => {
+    gsap.from(el.querySelectorAll('.cta-word'), {
+      y: 16, opacity: 0, duration: 0.6, stagger: 0.05, scrollTrigger: { trigger: el, start: 'top 80%' }
+    })
+  })
+  const mail = `mailto:${socialLinks.email}`
 
   return (
-    <section id="contacto" ref={sectionRef} className="contact-section">
-      <div className="contact-wrapper">
-        <h2>{t.contact.title}</h2>
-        <p>{t.contact.description}</p>
-        <div className="contact-links">
-          <a href={`mailto:${socialLinks.email}`} className="contact-link">
-            <EmailIcon />
-            {socialLinks.email}
-          </a>
-          <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="contact-link">
-            <GitHubIcon />
-            GitHub
-          </a>
-          {/* <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="contact-link">
-            <LinkedInIcon />
-            LinkedIn
-          </a> */}
-        </div>
+    <section id="contact" className="cta wrap" ref={ref}>
+      <h2 className="cta-title">{words(before)}{words(grey, 'cta-grey')}{words(after)}</h2>
+      <p>{t.contact.description}</p>
+      <div className="cta-actions">
+        <a className="btn-solid" href={mail}><MailIcon />{t.contact.hire}</a>
       </div>
+      <a className="cta-email mono" href={mail}>{socialLinks.email}</a>
     </section>
   )
 }

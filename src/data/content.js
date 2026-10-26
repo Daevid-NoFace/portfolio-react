@@ -1,47 +1,15 @@
 export const skillsData = [
-  {
-    icon: "☕",
-    tags: ["Java", "Spring Boot", "Spring Security", "JPA/Hibernate", "Maven"]
-  },
-  {
-    icon: "🗄️",
-    tags: ["PostgreSQL", "MySQL", "Redis"]
-  },
-  {
-    icon: "🌐",
-    tags: ["React", "Astro", "TailwindCSS", "TypeScript", "HTML/CSS"]
-  },
-  {
-    icon: "⚙️",
-    tags: ["Docker", "Git", "GitHub Actions", "Linux"]
-  }
+  { tags: ["Java", "Spring Boot", "Spring Security", "JPA / Hibernate", "PostgreSQL", "MySQL", "Redis"] },
+  { tags: ["Angular", "TailwindCSS", "TypeScript", "React", "Astro"] },
+  { tags: ["Python", "FastAPI", "MCP servers", "Agent workflows", "Claude Code"] },
+  { tags: ["Docker", "GitHub Actions", "Git", "Linux"] }
 ]
 
 export const projectsData = [
-  {
-    emoji: "🛒",
-    tech: ["Spring Boot", "PostgreSQL", "Astro", "Stripe API"],
-    github: "#",
-    demo: "#"
-  },
-  {
-    emoji: "📝",
-    tech: ["Java", "Spring Security", "React", "TailwindCSS"],
-    github: "#",
-    demo: "#"
-  },
-  {
-    emoji: "⚽",
-    tech: ["Spring Boot", "PostgreSQL", "REST API", "Charts"],
-    github: "#",
-    demo: "#"
-  },
-  {
-    emoji: "📊",
-    tech: ["Java", "Thymeleaf", "PostgreSQL", "iText PDF"],
-    github: "#",
-    demo: "#"
-  }
+  { tech: ["Spring Boot", "PostgreSQL", "Astro", "Stripe API"], github: "#", demo: "#" },
+  { tech: ["Java", "Spring Security", "React", "TailwindCSS"], github: "#", demo: "#" },
+  { tech: ["Spring Boot", "PostgreSQL", "REST API", "Charts"], github: "#", demo: "#" },
+  { tech: ["Java", "Thymeleaf", "PostgreSQL", "iText PDF"], github: "#", demo: "#" }
 ]
 
 export const socialLinks = {
@@ -50,9 +18,11 @@ export const socialLinks = {
   linkedin: "https://linkedin.com/in/tu-usuario",
 };
 
-export const personalInfo = {
-  name: "David",
-  yearsExperience: "2+",
-  projectsCount: "15+",
-  dedication: "100%"
-}
+export const stats = [
+  { value: 3, suffix: '+' },
+  { value: 20, suffix: '+' },
+  { value: 4 },
+  { value: 'PT' }
+]
+
+export const location = "Famalicão, PT"
